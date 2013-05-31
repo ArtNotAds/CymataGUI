@@ -1,11 +1,14 @@
 /*
  CymataGUI 0.1
+ (artnotads.org)
  
  based on HemeshGuiLight v0.2
  
  Requires:
  - Hemesh Beta 1.4.9 by Frederik Vanhoutte
  - controlP5 0.5.4 by Andreas Schlegel
+
+Press 'k' to play the sound clip in the data folder
 
 */
 
