@@ -1,18 +1,11 @@
 /*
+ CymataGUI 0.1
  
- HemeshGuiLight v0.2
- by Amnon Owed (http://amnonp5.wordpress.com)
- 
- v0.2 changes:
- * Adapted HemeshGui to run under the latest Processing version (1.5.1)
- * Adapted HemeshGui to run under the latest Hemesh version (Beta 1.4.9)
+ based on HemeshGuiLight v0.2
  
  Requires:
  - Hemesh Beta 1.4.9 by Frederik Vanhoutte
  - controlP5 0.5.4 by Andreas Schlegel
- 
- Installation instructions:
- http://code.google.com/p/amnonp5
 
 */
 
