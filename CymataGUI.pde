@@ -108,7 +108,6 @@ void draw() {
     rightLevel = threshold;
   }
   
-  
   for (int j = 0; j < fft.specSize(); j++) {
     for (int i = 0; i < fft.specSize(); i++) {
       values[i][j]=20*fft.getBand(i)*noise(0.5*fft.getBand(i),0.5*fft.getBand(j));
@@ -121,20 +120,22 @@ void draw() {
   drawHemesh();
   popMatrix();
   
-  //Export the faces and vertices
+  //Export the faces and vertices to apply FFT values
     float[][] vertices =myShape.getVerticesAsFloat(); // first index = vertex index, second index = 0..2, x,y,z coordinate
     int [][] faces = myShape.getFacesAsInt();// first index = face index, second index = index of vertex belonging to face
      
     //Do something with the vertices
     for(int i=0;i<myShape.numberOfVertices();i++){
-     vertices[i][0]+=values[i][i]; 
-     vertices[i][1]+=values[i][i]; 
-     vertices[i][2]+=values[i][i]; 
+     vertices[i][0]+=values[i][0]; 
+     vertices[i][1]+=values[i][1]; 
+     vertices[i][2]+=values[i][2]; 
     }
      
     //Use the exported faces and vertices as source for a HEC_FaceList
     HEC_FromFacelist faceList=new HEC_FromFacelist().setFaces(faces).setVertices(vertices);
     myShape=new HE_Mesh(faceList);
+
+
 
   // save frame(s) without gui
   if (saveOn == true && saveNormal == true) {
